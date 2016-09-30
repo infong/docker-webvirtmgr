@@ -15,7 +15,7 @@ $ sudo chown -R webvirtmgr:webvirtmgr /data/vm
 ### Usage
 
 ```
-$ docker run -d -p 8080:8080 -p 6080:6080 --name webvirtmgr -v /data/vm:/data/vm primiano/docker-webvirtmgr
+$ docker run -d -p 8080:8080 -p 2086:2086 --name webvirtmgr -v /data/vm:/data/vm primiano/docker-webvirtmgr
 ```
 
 ### libvirtd configuration on the host

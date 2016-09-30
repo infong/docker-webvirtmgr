@@ -10,6 +10,7 @@ RUN git checkout 7f140f99f4 #v4.8.8
 RUN pip install -r requirements.txt
 ADD local_settings.py /webvirtmgr/webvirtmgr/local/local_settings.py
 RUN sed -i 's/0.0.0.0/172.17.42.1/g' vrtManager/create.py
+RUN sed -i 's/WS_PORT = 6080/WS_PORT = 2086/g' webvirtmgr/settings.py
 RUN /usr/bin/python /webvirtmgr/manage.py collectstatic --noinput
 
 ADD supervisor.webvirtmgr.conf /etc/supervisor/conf.d/webvirtmgr.conf
