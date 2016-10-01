@@ -6,7 +6,7 @@
 2. Pull the image from Docker Hub
 
 ```
-$ docker pull primiano/docker-webvirtmgr
+$ docker pull infong/docker-webvirtmgr
 $ sudo groupadd -g 1010 webvirtmgr
 $ sudo useradd -u 1010 -g webvirtmgr -s /sbin/nologin -d /data/vm webvirtmgr
 $ sudo chown -R webvirtmgr:webvirtmgr /data/vm
@@ -15,7 +15,7 @@ $ sudo chown -R webvirtmgr:webvirtmgr /data/vm
 ### Usage
 
 ```
-$ docker run -d -p 8080:8080 -p 2086:2086 --name webvirtmgr -v /data/vm:/data/vm primiano/docker-webvirtmgr
+$ docker run -d -p 8080:8080 -p 2086:2086 --name webvirtmgr -v /data/vm:/data/vm infong/docker-webvirtmgr
 ```
 
 ### libvirtd configuration on the host

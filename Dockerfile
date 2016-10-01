@@ -6,7 +6,6 @@ RUN apt-get -y update && \
 
 RUN git clone https://github.com/retspen/webvirtmgr /webvirtmgr
 WORKDIR /webvirtmgr
-RUN git checkout 7f140f99f4 #v4.8.8
 RUN pip install -r requirements.txt
 ADD local_settings.py /webvirtmgr/webvirtmgr/local/local_settings.py
 RUN sed -i 's/0.0.0.0/172.17.42.1/g' vrtManager/create.py
@@ -27,5 +26,5 @@ WORKDIR /
 VOLUME /data/vm
 
 EXPOSE 8080
-EXPOSE 6080
+EXPOSE 2086
 CMD ["supervisord", "-n"]
